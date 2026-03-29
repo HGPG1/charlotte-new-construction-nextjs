@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@400;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('https://cdn.jsdelivr.net/gh/nicholasgasior/cooper-hewitt@master/CooperHewitt-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('https://cdn.jsdelivr.net/gh/nicholasgasior/cooper-hewitt@master/CooperHewitt-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('https://cdn.jsdelivr.net/gh/nicholasgasior/cooper-hewitt@master/CooperHewitt-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('https://cdn.jsdelivr.net/gh/nicholasgasior/cooper-hewitt@master/CooperHewitt-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cooper Hewitt', 'Inter', sans-serif;
+  color: #2A384C;
+  background: #F0F0F0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sansita', 'Playfair Display', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F0F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #A0B2C2;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A384C;
+}
+
+/* Quiz radio/checkbox styling */
+.quiz-option {
+  @apply border-2 border-silver rounded-lg p-4 cursor-pointer transition-all duration-200;
+}
+.quiz-option:hover {
+  @apply border-slate bg-white;
+}
+.quiz-option.selected {
+  @apply border-navy bg-white shadow-md;
+}
+
+/* Range slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #D1D9DF;
+  border-radius: 3px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2A384C;
+  border-radius: 50%;
+  cursor: pointer;
+}

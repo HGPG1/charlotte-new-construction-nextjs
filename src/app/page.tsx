@@ -8,13 +8,13 @@ import {
   Award, Lightbulb, Target, Sparkles, HelpCircle
 } from 'lucide-react'
 
-// âââ DATA âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── DATA ───────────────────────────────────────────────────────────────────
 
 const neighborhoods = [
   {
     name: 'South Charlotte',
     area: 'Ballantyne / Ardrey Kell / Rea Farms',
-    priceRange: '$450K â $1.2M',
+    priceRange: '$450K – $1.2M',
     schools: 'Ardrey Kell HS, Marvin Ridge HS',
     highlights: ['Top-rated schools', 'Proximity to Ballantyne', 'Established amenities', 'Resort-style pools'],
     builders: ['Toll Brothers', 'Shea Homes', 'Taylor Morrison'],
@@ -24,7 +24,7 @@ const neighborhoods = [
   {
     name: 'Fort Mill, SC',
     area: 'Tega Cay / Baxter / Riverwalk',
-    priceRange: '$380K â $900K',
+    priceRange: '$380K – $900K',
     schools: 'Fort Mill HS, Nation Ford HS',
     highlights: ['No state income tax (SC)', 'Anne Springs Greenway', 'Walkable town center', 'Lake Wylie access'],
     builders: ['Meritage Homes', 'Lennar', 'M/I Homes'],
@@ -34,7 +34,7 @@ const neighborhoods = [
   {
     name: 'Indian Land, SC',
     area: 'Sun City / Bridgemill / Creekside',
-    priceRange: '$320K â $750K',
+    priceRange: '$320K – $750K',
     schools: 'Indian Land HS, Buford HS',
     highlights: ['Best value per sq ft', 'Active adult communities', '485 access to Charlotte', 'Rapid development'],
     builders: ['DR Horton', 'Pulte Homes', 'Lennar'],
@@ -44,7 +44,7 @@ const neighborhoods = [
   {
     name: 'Waxhaw, NC',
     area: 'Cureton / Millbridge / The Stables',
-    priceRange: '$400K â $1M',
+    priceRange: '$400K – $1M',
     schools: 'Weddington HS, Marvin Ridge HS',
     highlights: ['Historic downtown', 'Large homesites', 'Equestrian community', 'Top Union County schools'],
     builders: ['Taylor Morrison', 'Toll Brothers', 'Shea Homes'],
@@ -54,7 +54,7 @@ const neighborhoods = [
   {
     name: 'Lake Norman',
     area: 'Mooresville / Davidson / Cornelius',
-    priceRange: '$450K â $1.5M',
+    priceRange: '$450K – $1.5M',
     schools: 'Mooresville HS, Hough HS',
     highlights: ['Lakefront living', 'Boat access', 'I-77 corridor', 'Growing restaurant scene'],
     builders: ['Toll Brothers', 'M/I Homes', 'Shea Homes'],
@@ -67,7 +67,7 @@ const builders = [
   {
     name: 'Toll Brothers',
     tagline: 'Luxury New Home Builder',
-    priceRange: '$550K â $1.5M+',
+    priceRange: '$550K – $1.5M+',
     rating: 4.5,
     incentive: 'Up to $25,000 in design center credits',
     incentiveExpiry: 'Q2 2026',
@@ -78,7 +78,7 @@ const builders = [
   {
     name: 'Meritage Homes',
     tagline: 'Energy-Efficient Living',
-    priceRange: '$380K â $700K',
+    priceRange: '$380K – $700K',
     rating: 4.3,
     incentive: 'Up to $15,000 closing cost assistance + rate buydown',
     incentiveExpiry: 'Limited time',
@@ -89,18 +89,18 @@ const builders = [
   {
     name: 'Lennar',
     tagline: 'Everything\'s Included',
-    priceRange: '$350K â $650K',
+    priceRange: '$350K – $650K',
     rating: 4.2,
     incentive: '3.99% fixed rate with Lennar Mortgage + $10K flex cash',
     incentiveExpiry: 'Q2 2026',
     communities: 15,
-    features: ['Everything\'s IncludedÂ® program', 'Smart home features', 'Wi-Fi CERTIFIEDâ¢', 'Multi-gen living options'],
-    specialties: ['Single-family', 'Townhomes', 'Next GenÂ® suites'],
+    features: ['Everything\'s Included® program', 'Smart home features', 'Wi-Fi CERTIFIED™', 'Multi-gen living options'],
+    specialties: ['Single-family', 'Townhomes', 'Next Gen® suites'],
   },
   {
     name: 'Taylor Morrison',
     tagline: 'America\'s Most Trusted Builder',
-    priceRange: '$420K â $900K',
+    priceRange: '$420K – $900K',
     rating: 4.4,
     incentive: 'Up to $20,000 in closing costs with TM Mortgage',
     incentiveExpiry: 'Ongoing',
@@ -111,7 +111,7 @@ const builders = [
   {
     name: 'DR Horton',
     tagline: 'America\'s Builder',
-    priceRange: '$290K â $550K',
+    priceRange: '$290K – $550K',
     rating: 4.0,
     incentive: 'Up to $12,000 with DHI Mortgage + washer/dryer included',
     incentiveExpiry: 'Q2 2026',
@@ -121,19 +121,19 @@ const builders = [
   },
   {
     name: 'Pulte Homes',
-    tagline: 'Life TestedÂ® Home Designs',
-    priceRange: '$370K â $750K',
+    tagline: 'Life Tested® Home Designs',
+    priceRange: '$370K – $750K',
     rating: 4.3,
     incentive: '4.25% rate buydown + up to $15K design studio credit',
     incentiveExpiry: 'Limited time',
     communities: 10,
-    features: ['Life TestedÂ® designs', 'Built-in organization', 'Open floor plans', 'Del Webb 55+'],
+    features: ['Life Tested® designs', 'Built-in organization', 'Open floor plans', 'Del Webb 55+'],
     specialties: ['Single-family', 'Active adult (Del Webb)', 'Townhomes'],
   },
   {
     name: 'M/I Homes',
     tagline: 'A Tradition of Quality',
-    priceRange: '$400K â $800K',
+    priceRange: '$400K – $800K',
     rating: 4.4,
     incentive: 'Up to $20,000 closing cost credit with M/I Financial',
     incentiveExpiry: 'Ongoing',
@@ -144,12 +144,12 @@ const builders = [
   {
     name: 'Shea Homes',
     tagline: 'Live the Difference',
-    priceRange: '$450K â $1.1M',
+    priceRange: '$450K – $1.1M',
     rating: 4.5,
     incentive: 'Up to $30,000 in design upgrades on select plans',
     incentiveExpiry: 'Q2 2026',
     communities: 5,
-    features: ['SheaConnectâ¢ smart home', 'Indoor air PLUS', 'Water-saving fixtures', 'Premium designs'],
+    features: ['SheaConnect™ smart home', 'Indoor air PLUS', 'Water-saving fixtures', 'Premium designs'],
     specialties: ['Single-family', 'Active adult (Trilogy)'],
   },
 ]
@@ -168,8 +168,8 @@ const quizQuestions = [
     question: 'What is your target budget range?',
     options: [
       { label: 'Under $400K', value: 'under-400' },
-      { label: '$400K â $600K', value: '400-600' },
-      { label: '$600K â $900K', value: '600-900' },
+      { label: '$400K – $600K', value: '400-600' },
+      { label: '$600K – $900K', value: '600-900' },
       { label: '$900K+', value: '900-plus' },
     ],
   },
@@ -194,9 +194,9 @@ const quizQuestions = [
   {
     question: 'When are you looking to move?',
     options: [
-      { label: 'ASAP â Quick move-in', value: 'asap' },
-      { label: '3â6 months', value: '3-6' },
-      { label: '6â12 months (build from scratch)', value: '6-12' },
+      { label: 'ASAP – Quick move-in', value: 'asap' },
+      { label: '3–6 months', value: '3-6' },
+      { label: '6–12 months (build from scratch)', value: '6-12' },
       { label: 'Just researching', value: 'researching' },
     ],
   },
@@ -206,12 +206,12 @@ const strategies = [
   {
     icon: DollarSign,
     title: 'Negotiate Builder Incentives',
-    description: 'Builders rarely advertise their best deals. A buyer\'s agent who specializes in new construction knows which communities are offering rate buydowns, design credits, and closing cost assistance â and can negotiate even better terms.',
+    description: 'Builders rarely advertise their best deals. A buyer\'s agent who specializes in new construction knows which communities are offering rate buydowns, design credits, and closing cost assistance — and can negotiate even better terms.',
   },
   {
     icon: Clock,
     title: 'Time Your Purchase Right',
-    description: 'End-of-quarter and end-of-year are when builders are most motivated to close deals. Inventory homes (already built but unsold) often carry the deepest discounts, sometimes $30Kâ$50K below original list.',
+    description: 'End-of-quarter and end-of-year are when builders are most motivated to close deals. Inventory homes (already built but unsold) often carry the deepest discounts, sometimes $30K–$50K below original list.',
   },
   {
     icon: Shield,
@@ -235,7 +235,7 @@ const strategies = [
   },
 ]
 
-// âââ COMPONENTS âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── COMPONENTS ─────────────────────────────────────────────────────────────
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -257,7 +257,7 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
-// âââ NAVIGATION âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── NAVIGATION ─────────────────────────────────────────────────────────────
 
 function Navigation({ activeSection, onNavigate }: { activeSection: string; onNavigate: (section: string) => void }) {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -349,7 +349,7 @@ function Navigation({ activeSection, onNavigate }: { activeSection: string; onNa
   )
 }
 
-// âââ HERO SECTION âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── HERO SECTION ───────────────────────────────────────────────────────────
 
 function HeroSection({ onNavigate }: { onNavigate: (section: string) => void }) {
   return (
@@ -415,7 +415,7 @@ function HeroSection({ onNavigate }: { onNavigate: (section: string) => void }) 
   )
 }
 
-// âââ BUYER QUIZ âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── BUYER QUIZ ─────────────────────────────────────────────────────────────
 
 function BuyerQuiz() {
   const [currentQ, setCurrentQ] = useState(0)
@@ -520,7 +520,7 @@ function BuyerQuiz() {
               className="flex-1 flex items-center justify-center gap-2 bg-navy text-white py-3 px-6 rounded-xl font-semibold hover:bg-navy/90 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              Talk to Brian â 803-902-4701
+              Talk to Brian – 803-902-4701
             </a>
             <button
               onClick={resetQuiz}
@@ -582,14 +582,14 @@ function BuyerQuiz() {
           onClick={() => setCurrentQ(currentQ - 1)}
           className="mt-6 text-navy/50 hover:text-navy text-sm font-medium flex items-center gap-1 mx-auto"
         >
-          â Back to previous question
+          ← Back to previous question
         </button>
       )}
     </div>
   )
 }
 
-// âââ NEIGHBORHOODS ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── NEIGHBORHOODS ──────────────────────────────────────────────────────────
 
 function NeighborhoodCards() {
   const [expanded, setExpanded] = useState<string | null>(null)
@@ -662,7 +662,7 @@ function NeighborhoodCards() {
   )
 }
 
-// âââ BUILDER CARDS ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── BUILDER CARDS ──────────────────────────────────────────────────────────
 
 function BuilderCards() {
   const [filter, setFilter] = useState<string>('all')
@@ -780,7 +780,7 @@ function BuilderCards() {
   )
 }
 
-// âââ CALCULATOR âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── CALCULATOR ─────────────────────────────────────────────────────────────
 
 function SavingsCalculator() {
   const [homePrice, setHomePrice] = useState(450000)
@@ -968,7 +968,7 @@ function SavingsCalculator() {
               className="inline-flex items-center gap-2 bg-navy text-white px-6 py-3 rounded-xl font-semibold hover:bg-navy/90 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              Call Brian â 803-902-4701
+              Call Brian – 803-902-4701
             </a>
           </div>
         </div>
@@ -977,7 +977,7 @@ function SavingsCalculator() {
   )
 }
 
-// âââ STRATEGIES âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── STRATEGIES ─────────────────────────────────────────────────────────────
 
 function StrategiesSection() {
   return (
@@ -1001,7 +1001,7 @@ function StrategiesSection() {
   )
 }
 
-// âââ CTA SECTION ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── CTA SECTION ────────────────────────────────────────────────────────────
 
 function CTASection() {
   return (
@@ -1013,7 +1013,7 @@ function CTASection() {
         <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto">
           Brian McCarron and the Home Grown Property Group team specialize in new construction
           across Charlotte, South Charlotte, Fort Mill, Indian Land, and Waxhaw. Let us negotiate
-          the best deal for you â at no cost.
+          the best deal for you — at no cost.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
@@ -1041,7 +1041,7 @@ function CTASection() {
   )
 }
 
-// âââ FOOTER âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── FOOTER ─────────────────────────────────────────────────────────────────
 
 function Footer() {
   return (
@@ -1054,7 +1054,7 @@ function Footer() {
             <span className="text-white/30 text-sm">| Real Broker, LLC</span>
           </div>
           <div className="text-white/40 text-sm text-center sm:text-right">
-            <p>Â© {new Date().getFullYear()} Home Grown Property Group. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Home Grown Property Group. All rights reserved.</p>
             <p className="mt-1">Brian McCarron | 803-902-4701 | brian@homegrownpropertygroup.com</p>
           </div>
         </div>
@@ -1063,7 +1063,7 @@ function Footer() {
   )
 }
 
-// âââ MAIN PAGE ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── MAIN PAGE ──────────────────────────────────────────────────────────────
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState('hero')
